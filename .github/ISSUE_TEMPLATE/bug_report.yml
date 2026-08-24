@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducible Praxis problem
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Describe the actual and expected behavior.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Praxis version
+      placeholder: "1.2.0"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment
+      description: Windows build, Bluetooth adapter/driver, iPad model, iPadOS version and PowerPoint version where relevant.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction steps and logs
+      description: Remove pairing secrets, device identifiers, file paths containing personal data and speaker notes before posting.
+    validations:
+      required: true

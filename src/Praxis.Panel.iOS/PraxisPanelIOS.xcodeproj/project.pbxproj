@@ -1,0 +1,221 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		400000000000000000000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000001 /* AppDelegate.swift */; };
+		400000000000000000000002 /* PanelRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000002 /* PanelRootViewController.swift */; };
+		400000000000000000000003 /* BluetoothConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000003 /* BluetoothConnectionState.swift */; };
+		400000000000000000000004 /* BluetoothPeripheralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000004 /* BluetoothPeripheralService.swift */; };
+		400000000000000000000005 /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000005 /* JSONValue.swift */; };
+		400000000000000000000006 /* PraxisFrameError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000006 /* PraxisFrameError.swift */; };
+		400000000000000000000007 /* PraxisFrameEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000007 /* PraxisFrameEncoder.swift */; };
+		400000000000000000000008 /* PraxisFrameReassembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000008 /* PraxisFrameReassembler.swift */; };
+		400000000000000000000009 /* PraxisProtocolMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000009 /* PraxisProtocolMessage.swift */; };
+		40000000000000000000000A /* PraxisProtocolSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000A /* PraxisProtocolSession.swift */; };
+		40000000000000000000000B /* PraxisConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000B /* PraxisConfigurationStore.swift */; };
+		40000000000000000000000C /* PraxisStateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000C /* PraxisStateStore.swift */; };
+		40000000000000000000000D /* PraxisTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000D /* PraxisTheme.swift */; };
+		40000000000000000000000E /* PraxisGlyphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000E /* PraxisGlyphView.swift */; };
+		40000000000000000000000F /* PraxisWordmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000F /* PraxisWordmarkView.swift */; };
+		400000000000000000000010 /* HeaderActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000010 /* HeaderActionButton.swift */; };
+		400000000000000000000011 /* PraxisHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000011 /* PraxisHeaderView.swift */; };
+		400000000000000000000012 /* PraxisToastStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000012 /* PraxisToastStackView.swift */; };
+		400000000000000000000013 /* CompactTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000013 /* CompactTabBarView.swift */; };
+		400000000000000000000014 /* SystemSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000014 /* SystemSummaryViewController.swift */; };
+		400000000000000000000015 /* PraxisControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000015 /* PraxisControlButton.swift */; };
+		400000000000000000000016 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000016 /* ControlViewController.swift */; };
+		400000000000000000000017 /* MarqueeLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000017 /* MarqueeLabelView.swift */; };
+		400000000000000000000018 /* PresentationActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000018 /* PresentationActionButton.swift */; };
+		400000000000000000000019 /* HoldToConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000019 /* HoldToConfirmButton.swift */; };
+		40000000000000000000001A /* RecentPresentationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001A /* RecentPresentationCell.swift */; };
+		40000000000000000000001B /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001B /* PresentationViewController.swift */; };
+		40000000000000000000001C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001C /* Assets.xcassets */; };
+		40000000000000000000001D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001D /* LaunchScreen.storyboard */; };
+		40000000000000000000001F /* PraxisFrameCodecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001F /* PraxisFrameCodecTests.swift */; };
+		400000000000000000000020 /* PraxisIconStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000023 /* PraxisIconStore.swift */; };
+		400000000000000000000021 /* PraxisCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000024 /* PraxisCrypto.swift */; };
+		400000000000000000000022 /* PraxisSecureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000025 /* PraxisSecureSession.swift */; };
+		400000000000000000000023 /* PairingOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000026 /* PairingOverlayView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A00000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 700000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 600000000000000000000001;
+			remoteInfo = PraxisPanelIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		200000000000000000000001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Application/AppDelegate.swift; sourceTree = "<group>"; };
+		200000000000000000000002 /* PanelRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Application/PanelRootViewController.swift; sourceTree = "<group>"; };
+		200000000000000000000003 /* BluetoothConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Bluetooth/BluetoothConnectionState.swift; sourceTree = "<group>"; };
+		200000000000000000000004 /* BluetoothPeripheralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Bluetooth/BluetoothPeripheralService.swift; sourceTree = "<group>"; };
+		200000000000000000000005 /* JSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Protocol/JSONValue.swift; sourceTree = "<group>"; };
+		200000000000000000000006 /* PraxisFrameError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Protocol/PraxisFrameError.swift; sourceTree = "<group>"; };
+		200000000000000000000007 /* PraxisFrameEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Protocol/PraxisFrameEncoder.swift; sourceTree = "<group>"; };
+		200000000000000000000008 /* PraxisFrameReassembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Protocol/PraxisFrameReassembler.swift; sourceTree = "<group>"; };
+		200000000000000000000009 /* PraxisProtocolMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Protocol/PraxisProtocolMessage.swift; sourceTree = "<group>"; };
+		20000000000000000000000A /* PraxisProtocolSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Protocol/PraxisProtocolSession.swift; sourceTree = "<group>"; };
+		20000000000000000000000B /* PraxisConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/State/PraxisConfigurationStore.swift; sourceTree = "<group>"; };
+		20000000000000000000000C /* PraxisStateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/State/PraxisStateStore.swift; sourceTree = "<group>"; };
+		20000000000000000000000D /* PraxisTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Components/PraxisTheme.swift; sourceTree = "<group>"; };
+		20000000000000000000000E /* PraxisGlyphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Components/PraxisGlyphView.swift; sourceTree = "<group>"; };
+		20000000000000000000000F /* PraxisWordmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Components/PraxisWordmarkView.swift; sourceTree = "<group>"; };
+		200000000000000000000010 /* HeaderActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Components/HeaderActionButton.swift; sourceTree = "<group>"; };
+		200000000000000000000011 /* PraxisHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Components/PraxisHeaderView.swift; sourceTree = "<group>"; };
+		200000000000000000000012 /* PraxisToastStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Components/PraxisToastStackView.swift; sourceTree = "<group>"; };
+		200000000000000000000013 /* CompactTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Components/CompactTabBarView.swift; sourceTree = "<group>"; };
+		200000000000000000000014 /* SystemSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Components/SystemSummaryViewController.swift; sourceTree = "<group>"; };
+		200000000000000000000015 /* PraxisControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Control/PraxisControlButton.swift; sourceTree = "<group>"; };
+		200000000000000000000016 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Control/ControlViewController.swift; sourceTree = "<group>"; };
+		200000000000000000000017 /* MarqueeLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Presentation/MarqueeLabelView.swift; sourceTree = "<group>"; };
+		200000000000000000000018 /* PresentationActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Presentation/PresentationActionButton.swift; sourceTree = "<group>"; };
+		200000000000000000000019 /* HoldToConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Presentation/HoldToConfirmButton.swift; sourceTree = "<group>"; };
+		20000000000000000000001A /* RecentPresentationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Presentation/RecentPresentationCell.swift; sourceTree = "<group>"; };
+		20000000000000000000001B /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Presentation/PresentationViewController.swift; sourceTree = "<group>"; };
+		20000000000000000000001C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PraxisPanelIOS/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		20000000000000000000001D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PraxisPanelIOS/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20000000000000000000001E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PraxisPanelIOS/Resources/Info.plist; sourceTree = "<group>"; };
+		20000000000000000000001F /* PraxisFrameCodecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOSTests/PraxisFrameCodecTests.swift; sourceTree = "<group>"; };
+		200000000000000000000020 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		200000000000000000000021 /* PraxisPanelIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PraxisPanelIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		200000000000000000000022 /* PraxisPanelIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PraxisPanelIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		200000000000000000000023 /* PraxisIconStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/State/PraxisIconStore.swift; sourceTree = "<group>"; };
+		200000000000000000000024 /* PraxisCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Security/PraxisCrypto.swift; sourceTree = "<group>"; };
+		200000000000000000000025 /* PraxisSecureSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/Security/PraxisSecureSession.swift; sourceTree = "<group>"; };
+		200000000000000000000026 /* PairingOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisPanelIOS/UI/Components/PairingOverlayView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		500000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		500000000000000000000004 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		300000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000001, 200000000000000000000002, 200000000000000000000003, 200000000000000000000004,
+				200000000000000000000005, 200000000000000000000006, 200000000000000000000007, 200000000000000000000008,
+				200000000000000000000009, 20000000000000000000000A, 20000000000000000000000B, 20000000000000000000000C,
+				20000000000000000000000D, 20000000000000000000000E, 20000000000000000000000F, 200000000000000000000010,
+				200000000000000000000011, 200000000000000000000012, 200000000000000000000013, 200000000000000000000014,
+				200000000000000000000015, 200000000000000000000016, 200000000000000000000017, 200000000000000000000018,
+				200000000000000000000019, 20000000000000000000001A, 20000000000000000000001B, 20000000000000000000001C,
+				20000000000000000000001D, 20000000000000000000001E, 20000000000000000000001F, 200000000000000000000020,
+				200000000000000000000023,
+				200000000000000000000024, 200000000000000000000025, 200000000000000000000026,
+				300000000000000000000002,
+			);
+			sourceTree = "<group>";
+		};
+		300000000000000000000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (200000000000000000000021, 200000000000000000000022);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		600000000000000000000001 /* PraxisPanelIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 900000000000000000000002;
+			buildPhases = (500000000000000000000002, 500000000000000000000001, 500000000000000000000003);
+			buildRules = ();
+			dependencies = ();
+			name = PraxisPanelIOS;
+			productName = PraxisPanelIOS;
+			productReference = 200000000000000000000021;
+			productType = "com.apple.product-type.application";
+		};
+		600000000000000000000002 /* PraxisPanelIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 900000000000000000000003;
+			buildPhases = (500000000000000000000005, 500000000000000000000004, 500000000000000000000006);
+			buildRules = ();
+			dependencies = (A00000000000000000000002);
+			name = PraxisPanelIOSTests;
+			productName = PraxisPanelIOSTests;
+			productReference = 200000000000000000000022;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		700000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					600000000000000000000001 = {CreatedOnToolsVersion = 15.4; };
+					600000000000000000000002 = {CreatedOnToolsVersion = 15.4; TestTargetID = 600000000000000000000001; };
+				};
+			};
+			buildConfigurationList = 900000000000000000000001;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = 300000000000000000000001;
+			productRefGroup = 300000000000000000000002;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (600000000000000000000001, 600000000000000000000002);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		500000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (40000000000000000000001C, 40000000000000000000001D); runOnlyForDeploymentPostprocessing = 0; };
+		500000000000000000000006 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		500000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400000000000000000000001, 400000000000000000000002, 400000000000000000000003, 400000000000000000000004,
+				400000000000000000000005, 400000000000000000000006, 400000000000000000000007, 400000000000000000000008,
+				400000000000000000000009, 40000000000000000000000A, 40000000000000000000000B, 40000000000000000000000C,
+				40000000000000000000000D, 40000000000000000000000E, 40000000000000000000000F, 400000000000000000000010,
+				400000000000000000000011, 400000000000000000000012, 400000000000000000000013, 400000000000000000000014,
+				400000000000000000000015, 400000000000000000000016, 400000000000000000000017, 400000000000000000000018,
+				400000000000000000000019, 40000000000000000000001A, 40000000000000000000001B, 400000000000000000000020,
+				400000000000000000000021, 400000000000000000000022, 400000000000000000000023,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		500000000000000000000005 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (40000000000000000000001F); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A00000000000000000000002 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 600000000000000000000001; targetProxy = A00000000000000000000001; };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		800000000000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_OPTIMIZATION_LEVEL = 0; IPHONEOS_DEPLOYMENT_TARGET = 12.0; MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE; ONLY_ACTIVE_ARCH = YES; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		800000000000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; GCC_C_LANGUAGE_STANDARD = gnu17; IPHONEOS_DEPLOYMENT_TARGET = 12.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; VALIDATE_PRODUCT = YES; }; name = Release; };
+		800000000000000000000003 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = PraxisPanelIOS/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 12.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = 1.2.0; PRODUCT_BUNDLE_IDENTIFIER = com.praxis.panel.ios; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 2; }; name = Debug; };
+		800000000000000000000004 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = PraxisPanelIOS/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 12.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = 1.2.0; PRODUCT_BUNDLE_IDENTIFIER = com.praxis.panel.ios; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 2; }; name = Release; };
+		800000000000000000000005 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 12.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks"; PRODUCT_BUNDLE_IDENTIFIER = com.praxis.panel.ios.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 2; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PraxisPanelIOS.app/PraxisPanelIOS"; }; name = Debug; };
+		800000000000000000000006 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 12.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks"; PRODUCT_BUNDLE_IDENTIFIER = com.praxis.panel.ios.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 2; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PraxisPanelIOS.app/PraxisPanelIOS"; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		900000000000000000000001 /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (800000000000000000000001, 800000000000000000000002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		900000000000000000000002 /* Build configuration list for PraxisPanelIOS */ = {isa = XCConfigurationList; buildConfigurations = (800000000000000000000003, 800000000000000000000004); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		900000000000000000000003 /* Build configuration list for PraxisPanelIOSTests */ = {isa = XCConfigurationList; buildConfigurations = (800000000000000000000005, 800000000000000000000006); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = 700000000000000000000001 /* Project object */;
+}

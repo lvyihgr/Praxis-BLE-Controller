@@ -1,0 +1,128 @@
+name: Release
+
+on:
+  push:
+    tags: ["bluetooth-v*"]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing bluetooth-v* tag to build and publish
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+env:
+  RELEASE_TAG: ${{ inputs.release_tag || github.ref_name }}
+
+jobs:
+  ios-validation:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.RELEASE_TAG }}
+      - name: Validate release tag
+        shell: bash
+        run: |
+          [[ "$RELEASE_TAG" == bluetooth-v* ]] || {
+            echo "Release tag must start with bluetooth-v: $RELEASE_TAG" >&2
+            exit 1
+          }
+      - name: Test Praxis Link codec
+        run: swift test --package-path src/Praxis.Panel.iOS
+      - name: Build iPad app without signing
+        run: >-
+          xcodebuild
+          -project src/Praxis.Panel.iOS/PraxisPanelIOS.xcodeproj
+          -scheme PraxisPanelIOS
+          -destination 'generic/platform=iOS'
+          CODE_SIGNING_ALLOWED=NO
+          build
+
+  windows-release:
+    needs: ios-validation
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.RELEASE_TAG }}
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Test Windows Core and Bluetooth transport
+        shell: pwsh
+        run: .\scripts\test.ps1
+      - name: Install Inno Setup
+        shell: pwsh
+        run: choco install innosetup --yes --no-progress
+      - name: Build Windows installer
+        shell: pwsh
+        run: |
+          $version = $env:RELEASE_TAG -replace '^bluetooth-v', ''
+          .\scripts\build-installer.ps1 -Version $version
+      - name: Package portable Windows release
+        shell: pwsh
+        run: |
+          $version = $env:RELEASE_TAG -replace '^bluetooth-v', ''
+          Compress-Archive -Path .\artifacts\publish\bluetooth-win-x64\* -DestinationPath ".\Praxis-Bluetooth-$version-win-x64-portable.zip"
+      - name: Package iPad source release
+        shell: pwsh
+        run: |
+          $version = $env:RELEASE_TAG -replace '^bluetooth-v', ''
+          $archive = ".\Praxis-Bluetooth-$version-iPad-source.zip"
+          $prefix = "Praxis-Bluetooth-$version-iPad-source/"
+          git archive `
+            --format=zip `
+            --prefix=$prefix `
+            --output=$archive `
+            HEAD `
+            README.md `
+            INSTALLATION.md `
+            LICENSE `
+            PRIVACY.md `
+            SECURITY.md `
+            THIRD_PARTY_NOTICES.md `
+            CODE_OF_CONDUCT.md `
+            CONTRIBUTING.md `
+            licenses/LUCIDE-LICENSE.txt `
+            src/Praxis.Panel.iOS
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Generate SHA-256 checksums
+        shell: pwsh
+        run: |
+          $version = $env:RELEASE_TAG -replace '^bluetooth-v', ''
+          $setup = ".\artifacts\installer\Praxis-Bluetooth-Setup-$version-win-x64.exe"
+          $portable = ".\Praxis-Bluetooth-$version-win-x64-portable.zip"
+          $iPadSource = ".\Praxis-Bluetooth-$version-iPad-source.zip"
+          @(
+            "$(Get-FileHash -Algorithm SHA256 -LiteralPath $setup | Select-Object -ExpandProperty Hash)  $(Split-Path -Leaf $setup)"
+            "$(Get-FileHash -Algorithm SHA256 -LiteralPath $portable | Select-Object -ExpandProperty Hash)  $(Split-Path -Leaf $portable)"
+            "$(Get-FileHash -Algorithm SHA256 -LiteralPath $iPadSource | Select-Object -ExpandProperty Hash)  $(Split-Path -Leaf $iPadSource)"
+          ) | Set-Content -LiteralPath .\SHA256SUMS.txt -Encoding ascii
+      - name: Publish GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $version = $env:RELEASE_TAG -replace '^bluetooth-v', ''
+          $assets = @(
+            ".\artifacts\installer\Praxis-Bluetooth-Setup-$version-win-x64.exe"
+            ".\Praxis-Bluetooth-$version-win-x64-portable.zip"
+            ".\Praxis-Bluetooth-$version-iPad-source.zip"
+            ".\SHA256SUMS.txt"
+          )
+
+          gh release view $env:RELEASE_TAG *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $env:RELEASE_TAG @assets --clobber
+          }
+          else {
+            gh release create $env:RELEASE_TAG @assets `
+              --title "Praxis Bluetooth $version" `
+              --generate-notes `
+              --verify-tag `
+              --latest
+          }
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

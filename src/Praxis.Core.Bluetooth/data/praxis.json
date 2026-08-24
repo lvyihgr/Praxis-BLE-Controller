@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "activeProfileId": "default",
+  "profiles": [
+    {
+      "id": "default",
+      "name": "工作台",
+      "pages": [
+        {
+          "id": "overview",
+          "name": "控制",
+          "groups": [
+            {
+              "id": "applications",
+              "name": "",
+              "columns": 7,
+              "size": "large",
+              "controls": [
+                { "id": "chatgpt", "label": "ChatGPT", "icon": "app", "color": "green", "actionId": "app.chatgpt", "stateBinding": "process:ChatGPT" },
+                { "id": "zcode", "label": "ZCode", "icon": "app", "color": "cyan", "actionId": "app.zcode", "stateBinding": "process:ZCode" },
+                { "id": "trae-solo", "label": "TRAE SOLO", "icon": "app", "color": "violet", "actionId": "app.traeSolo", "stateBinding": "process:TRAE SOLO" },
+                { "id": "trae", "label": "Trae", "icon": "app", "color": "blue", "actionId": "app.trae", "stateBinding": "process:Trae" },
+                { "id": "edge", "label": "Edge", "icon": "app", "color": "cyan", "actionId": "app.edge", "stateBinding": "process:msedge" },
+                { "id": "feishu", "label": "飞书", "icon": "app", "color": "blue", "actionId": "app.feishu", "stateBinding": "process:Feishu" },
+                { "id": "vscode", "label": "VS Code", "icon": "app", "color": "blue", "actionId": "app.vscode", "stateBinding": "process:Code" }
+              ]
+            },
+            {
+              "id": "system",
+              "name": "",
+              "columns": 7,
+              "size": "medium",
+              "controls": [
+                { "id": "task-view", "label": "任务视图", "subtitle": "Win + Tab", "icon": "windows", "color": "blue", "actionId": "system.taskView" },
+                { "id": "screenshot", "label": "截图工具", "subtitle": "系统应用", "icon": "screenshot", "color": "green", "actionId": "system.screenshot" },
+                { "id": "explorer", "label": "文件管理", "subtitle": "资源管理器", "icon": "folder", "color": "amber", "actionId": "system.explorer" },
+                { "id": "notepad", "label": "记事本", "subtitle": "系统应用", "icon": "note", "color": "violet", "actionId": "system.notepad" },
+                { "id": "terminal", "label": "终端", "subtitle": "Windows Terminal", "icon": "terminal", "color": "cyan", "actionId": "system.terminal" },
+                { "id": "calculator", "label": "计算器", "subtitle": "系统应用", "icon": "calculator", "color": "blue", "actionId": "system.calculator" },
+                { "id": "desktop-view", "label": "显示桌面", "subtitle": "Win + D", "icon": "desktop", "color": "slate", "actionId": "system.desktop" }
+              ]
+            },
+            {
+              "id": "shortcuts",
+              "name": "",
+              "columns": 7,
+              "size": "compact",
+              "controls": [
+                { "id": "voice-input", "label": "语音输入", "icon": "mic", "color": "blue", "actionId": "shortcut.voiceInput" },
+                { "id": "play", "label": "播放 / 暂停", "icon": "play", "color": "slate", "actionId": "shortcut.playPause" },
+                { "id": "mute", "label": "静音 / 取消", "icon": "volume-off", "color": "slate", "actionId": "shortcut.mute" },
+                { "id": "volume-down", "label": "音量降低", "icon": "volume-down", "color": "slate", "actionId": "shortcut.volumeDown" },
+                { "id": "volume-up", "label": "音量提高", "icon": "volume-up", "color": "slate", "actionId": "shortcut.volumeUp" },
+                { "id": "copy", "label": "复制", "icon": "copy", "color": "slate", "actionId": "shortcut.copy" },
+                { "id": "paste", "label": "粘贴", "icon": "paste", "color": "slate", "actionId": "shortcut.paste" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "praxis",
+          "name": "演示",
+          "columns": 4,
+          "controls": []
+        }
+      ]
+    }
+  ],
+  "actions": [
+    { "id": "app.trae", "name": "Trae", "type": "appToggle", "parameters": { "processNames": "Trae", "file": "%LOCALAPPDATA%\\Programs\\Trae\\Trae.exe" }, "timeoutSeconds": 10 },
+    { "id": "app.traeSolo", "name": "TRAE SOLO", "type": "appToggle", "parameters": { "processNames": "TRAE SOLO", "file": "%LOCALAPPDATA%\\Programs\\TRAE SOLO\\TRAE SOLO.exe" }, "timeoutSeconds": 10 },
+    { "id": "app.zcode", "name": "ZCode", "type": "appToggle", "parameters": { "processNames": "ZCode", "file": "C:\\Program Files\\ZCode\\ZCode.exe" }, "timeoutSeconds": 10 },
+    { "id": "app.chatgpt", "name": "ChatGPT", "type": "appToggle", "parameters": { "processNames": "ChatGPT", "iconProcess": "ChatGPT", "packageFamilyName": "OpenAI.Codex_2p2nqsd0c76g0", "appUserModelId": "OpenAI.Codex_2p2nqsd0c76g0!App" }, "timeoutSeconds": 10 },
+    { "id": "app.vscode", "name": "VS Code", "type": "appToggle", "parameters": { "processNames": "Code", "file": "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe" }, "timeoutSeconds": 10 },
+    { "id": "app.edge", "name": "Edge", "type": "appToggle", "parameters": { "processNames": "msedge", "file": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe" }, "timeoutSeconds": 10 },
+    { "id": "app.feishu", "name": "飞书", "type": "appToggle", "parameters": { "processNames": "Feishu", "file": "%LOCALAPPDATA%\\Feishu\\Feishu.exe", "iconFile": "%LOCALAPPDATA%\\Feishu\\icon.ico" }, "timeoutSeconds": 10 },
+
+    { "id": "system.calculator", "name": "打开计算器", "type": "launch", "parameters": { "file": "calc.exe" }, "timeoutSeconds": 10 },
+    { "id": "system.notepad", "name": "打开记事本", "type": "launch", "parameters": { "file": "notepad.exe" }, "timeoutSeconds": 10 },
+    { "id": "system.terminal", "name": "打开终端", "type": "launch", "parameters": { "file": "wt.exe" }, "timeoutSeconds": 10 },
+    { "id": "system.explorer", "name": "打开文件管理", "type": "launch", "parameters": { "file": "explorer.exe" }, "timeoutSeconds": 10 },
+    { "id": "system.screenshot", "name": "打开截图工具", "type": "launch", "parameters": { "file": "snippingtool.exe" }, "timeoutSeconds": 10 },
+    { "id": "system.taskView", "name": "任务视图", "type": "hotkey", "parameters": { "keys": "Win+Tab" }, "timeoutSeconds": 5 },
+    { "id": "system.desktop", "name": "显示桌面", "type": "hotkey", "parameters": { "keys": "Win+D" }, "timeoutSeconds": 5 },
+    { "id": "system.summary", "name": "系统摘要", "type": "systemSummary", "parameters": {}, "timeoutSeconds": 20 },
+    { "id": "core.ping", "name": "连接测试", "type": "noop", "parameters": {}, "timeoutSeconds": 5 },
+
+    { "id": "presentation.open", "name": "打开或显示 PowerPoint", "type": "powerPoint", "parameters": { "command": "open", "iconProcess": "POWERPNT", "iconFile": "%ProgramFiles%\\Microsoft Office\\root\\Office16\\POWERPNT.EXE" }, "timeoutSeconds": 15 },
+    { "id": "presentation.openRecent", "name": "打开最近演示文稿", "type": "powerPoint", "parameters": { "command": "openRecent" }, "timeoutSeconds": 20 },
+    { "id": "presentation.startBeginning", "name": "从头开始放映", "type": "powerPoint", "parameters": { "command": "startBeginning" }, "timeoutSeconds": 15 },
+    { "id": "presentation.startCurrent", "name": "从当前页开始放映", "type": "powerPoint", "parameters": { "command": "startCurrent" }, "timeoutSeconds": 15 },
+    { "id": "presentation.previous", "name": "上一页", "type": "hotkey", "parameters": { "keys": "Up" }, "timeoutSeconds": 10 },
+    { "id": "presentation.next", "name": "下一页", "type": "hotkey", "parameters": { "keys": "Down" }, "timeoutSeconds": 10 },
+    { "id": "presentation.end", "name": "结束放映", "type": "powerPoint", "parameters": { "command": "end" }, "timeoutSeconds": 10 },
+
+    { "id": "shortcut.voiceInput", "name": "语音输入", "type": "hotkey", "parameters": { "keys": "RightAlt+Space" }, "timeoutSeconds": 5 },
+    { "id": "shortcut.playPause", "name": "播放或暂停", "type": "media", "parameters": { "command": "playPause" }, "timeoutSeconds": 5 },
+    { "id": "shortcut.mute", "name": "切换静音", "type": "media", "parameters": { "command": "mute" }, "timeoutSeconds": 5 },
+    { "id": "shortcut.volumeDown", "name": "音量降低", "type": "media", "parameters": { "command": "volumeDown" }, "timeoutSeconds": 5 },
+    { "id": "shortcut.volumeUp", "name": "音量提高", "type": "media", "parameters": { "command": "volumeUp" }, "timeoutSeconds": 5 },
+    { "id": "shortcut.copy", "name": "复制", "type": "hotkey", "parameters": { "keys": "Ctrl+C" }, "timeoutSeconds": 5 },
+    { "id": "shortcut.paste", "name": "粘贴", "type": "hotkey", "parameters": { "keys": "Ctrl+V" }, "timeoutSeconds": 5 }
+  ]
+}
