@@ -1,0 +1,47 @@
+name: Build iPad IPA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - name: Download source
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer
+          xcodebuild -version
+
+      - name: Build iPad app without signing
+        run: |
+          xcodebuild \
+            -project src/Praxis.Panel.iOS/PraxisPanelIOS.xcodeproj \
+            -scheme PraxisPanelIOS \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/PraxisBuild" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package IPA
+        run: |
+          mkdir -p "$RUNNER_TEMP/package/Payload"
+          cp -R \
+            "$RUNNER_TEMP/PraxisBuild/Build/Products/Release-iphoneos/PraxisPanelIOS.app" \
+            "$RUNNER_TEMP/package/Payload/"
+          cd "$RUNNER_TEMP/package"
+          zip -qry PraxisPanel-unsigned.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: PraxisPanel-unsigned
+          path: ${{ runner.temp }}/package/PraxisPanel-unsigned.ipa
+          if-no-files-found: error
